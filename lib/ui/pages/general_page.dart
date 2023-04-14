@@ -25,7 +25,8 @@ class GeneralPage extends StatelessWidget {
           ),
           SafeArea(
             child: Container(
-              color: backColor ?? "FAFAFC".toColor(),
+              child: Text(""),
+              color: backColor ?? Colors.white,
             ),
           ),
           SafeArea(
@@ -34,7 +35,6 @@ class GeneralPage extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(bottom: defaultMargin),
                       padding: EdgeInsets.symmetric(horizontal: defaultMargin),
                       width: double.infinity,
                       height: 100,
@@ -47,7 +47,10 @@ class GeneralPage extends StatelessWidget {
                                   height: 24,
                                   margin: EdgeInsets.only(right: 26),
                                   decoration: BoxDecoration(
-                                    image: DecorationImage(image: AssetImage('assets/back_arrow.png'),),
+                                    image: DecorationImage(
+                                      image:
+                                          AssetImage('assets/back_arrow.png'),
+                                    ),
                                   ),
                                 )
                               : SizedBox(),
@@ -70,9 +73,14 @@ class GeneralPage extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
+                    ),
+                    Container(
+                      height: defaultMargin,
+                      width: double.infinity,
+                      color: "FAFAFC".toColor(),
                     ),
                     child ?? SizedBox()
                   ],
