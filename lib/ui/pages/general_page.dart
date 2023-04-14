@@ -3,7 +3,7 @@ part of 'pages.dart';
 class GeneralPage extends StatelessWidget {
   final String title;
   final String subtitle;
-  final Function onBackButtonPress;
+  final bool onBackButtonPress;
   final Widget? child;
   final Color? backColor;
 
@@ -41,18 +41,23 @@ class GeneralPage extends StatelessWidget {
                       color: Colors.white,
                       child: Row(
                         children: [
-                          onBackButtonPress != null
-                              ? Container(
-                                  width: 24,
-                                  height: 24,
-                                  margin: EdgeInsets.only(right: 26),
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image:
-                                          AssetImage('assets/back_arrow.png'),
+                          onBackButtonPress != false
+                              ? GestureDetector(
+                                onTap: () {
+                                  Get.back();
+                                },
+                                child: Container(
+                                    width: 24,
+                                    height: 24,
+                                    margin: EdgeInsets.only(right: 26),
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image:
+                                            AssetImage('assets/back_arrow.png'),
+                                      ),
                                     ),
                                   ),
-                                )
+                              )
                               : SizedBox(),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

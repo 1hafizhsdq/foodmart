@@ -17,7 +17,7 @@ class _SignInPageState extends State<SignInPage> {
     return GeneralPage(
       title: 'Sign In',
       subtitle: 'Find your best ever meal',
-      onBackButtonPress: () {},
+      onBackButtonPress: false,
       child: Column(
         children: [
           Container(
@@ -110,7 +110,9 @@ class _SignInPageState extends State<SignInPage> {
                     color: mainColor,
                   )
                 : TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(SignUpPage());
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: greyColor,
                       shape: RoundedRectangleBorder(
