@@ -20,11 +20,29 @@ class Food {
   });
 }
 
-Food mockFood = Food(
+List<Food> mockFoods = [
+  Food(
     id: 1,
     picturePath: 'https://kbu-cdn.com/dk/wp-content/uploads/sate-kambing-bumbu-kecap.jpg',
     name: 'Sate Kambing',
     description: 'Sate Kambing enak mantap pol wes sakmene ae deskripsine pusing mikir panjang2',
     ingridients: '400 gram daging kambing (potong-potong),10 tusuk sate,lada putih secukupnya,1 sachet Saus Tiram Selera,10 siung bawang merah (rajang kasar)',
     price: 35000,
-    rate: 4.2);
+    rate: 4.2),
+    Food(
+    id: 2,
+    picturePath: 'https://kbu-cdn.com/dk/wp-content/uploads/sate-kambing-bumbu-kecap.jpg',
+    name: 'Sate Kambing',
+    description: 'Sate Kambing enak mantap pol wes sakmene ae deskripsine pusing mikir panjang2',
+    ingridients: '400 gram daging kambing (potong-potong),10 tusuk sate,lada putih secukupnya,1 sachet Saus Tiram Selera,10 siung bawang merah (rajang kasar)',
+    price: 35000,
+    rate: 4.2),
+    Food(
+    id: 3,
+    picturePath: 'https://kbu-cdn.com/dk/wp-content/uploads/sate-kambing-bumbu-kecap.jpg',
+    name: 'Sate Kambing',
+    description: 'Sate Kambing enak mantap pol wes sakmene ae deskripsine pusing mikir panjang2',
+    ingridients: '400 gram daging kambing (potong-potong),10 tusuk sate,lada putih secukupnya,1 sachet Saus Tiram Selera,10 siung bawang merah (rajang kasar)',
+    price: 35000,
+    rate: 4.2),
+];
