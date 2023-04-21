@@ -1,7 +1,10 @@
 part of 'widgets.dart';
 
 class FoodCard extends StatelessWidget {
-  const FoodCard({super.key});
+  // const FoodCard({super.key});
+  final Food food;
+
+  FoodCard(this.food);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,33 @@ class FoodCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          RatingStars(3.5),
+          Container(
+            height: 140,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(8),
+                topRight: Radius.circular(8),
+              ),
+              image: DecorationImage(
+                image: NetworkImage(food.picturePath),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(12, 12, 12, 6),
+            width: 200,
+            child: Text(
+              food.name,
+              style: blackFontStyle2,
+              maxLines: 1,
+              overflow: TextOverflow.clip,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 12),
+            child: RatingStars(food.rate),
+          ),
         ],
       ),
     );
